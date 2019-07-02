@@ -2,16 +2,6 @@
   font-family: skolarSans;
   src: url(../font/SkolarSansLatn-Bd.otf);
 }
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
 @keyframes hideshow {
   0% {
     opacity: 0.25;
@@ -27,17 +17,24 @@
   0% {
     opacity: 0;
   }
-  50% {
+  10% {
+    opacity: 1;
+  }
+  90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
-svg {
-  z-index: 1;
+@keyframes dash {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
-
 body {
   background: #efefef;
 }
@@ -45,9 +42,19 @@ body .container {
   margin-top: 1em;
 }
 
+svg {
+  z-index: 1;
+}
+
 .map-pin {
   opacity: 0;
   animation: fading 10s infinite;
+}
+
+.path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash 1s linear alternate infinite;
 }
 
 .pin-balloon {
