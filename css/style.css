@@ -1,0 +1,33 @@
+@keyframes hideshow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+svg {
+  z-index: 1;
+}
+
+body {
+  background: #efefef;
+}
+body .container {
+  margin-top: 1em;
+}
+
+.map-pin {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
