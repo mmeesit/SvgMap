@@ -1,12 +1,34 @@
+@font-face {
+  font-family: skolarSans;
+  src: url(../font/SkolarSansLatn-Bd.otf);
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
 @keyframes hideshow {
   0% {
+    opacity: 0.25;
+  }
+  10% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fading {
+  0% {
+    opacity: 0;
   }
   50% {
     opacity: 1;
-  }
-  75% {
-    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -24,10 +46,13 @@ body .container {
 }
 
 .map-pin {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  opacity: 1;
+  opacity: 0;
+  animation: fading 10s infinite;
+}
+
+.pin-balloon {
+  opacity: 0;
+  animation: fading 10s 1s infinite;
 }
 
 /*# sourceMappingURL=style.css.map */
