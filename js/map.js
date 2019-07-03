@@ -28,7 +28,7 @@ function getPositionArray(pinNumber) {
     return relativePos;
 }
 function positionStaticElements() {
-    var fillNumbers = [5531, 1073, 1503, 3349]; //NYC, LONDON, BERLIN, MOSCOW, TOKYO
+    var fillNumbers = [5531, 1073, 1503, 3349]; //NYC, LONDON, MOSCOW, TOKYO
     var staticPinId = 1;
     for (var _i = 0, fillNumbers_1 = fillNumbers; _i < fillNumbers_1.length; _i++) {
         var fillNumber = fillNumbers_1[_i];

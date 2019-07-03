@@ -1,10 +1,10 @@
 # SvgMap
 
 Basically, I am doing this with SVG image paths - I am searching the map point
-path position in relation to main svg element. Then I am finding random map point
+path position in relation to main svg element. Then I am searching for random map point
 between 1-6175 (current map point amount) and adding a map pin to it.
 Some pins will become absolute, ie Moscow, Berlin, New York, which also have
-a text point or sorts.
+a text and info card or sorts.
 It will find random map points every 15 seconds, except the static points, until 5 minutes runs out.
 
 Currently pins are added already in the main SVG, inside a group.
@@ -21,4 +21,4 @@ This is a MVP, not the perfect product.
 
 The data cards are all static html elements for presentation purposes only.
 
-
+![alt](https://imgur.com/a/xnkoJxY)
