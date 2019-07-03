@@ -3,34 +3,28 @@
   src: url(../font/SkolarSansLatn-Bd.otf);
 }
 
-@keyframes hideshow {
-  0%{ opacity: 0.25; }
-  10%{ opacity: 1; }
-  100%{ opacity: 0; }
+@font-face {
+  font-family: skolarRegular;
+  src: url("../font/SkolarSansLatn-Rg.otf");
 }
 
 @keyframes fading {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fading-secondary {
+  30% { opacity: 0; }
+  35% { opacity: 1; }
+  75% { opacity: 1; }
+  80% { opacity: 0; }
 }
 
 @keyframes dash {
-  from {
-    stroke-dashoffset: 100;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
 }
 
 body {
@@ -39,6 +33,10 @@ body {
   .container {
     margin-top: 1em;
   }
+
+  .relative-container {
+    position: relative;
+  }
 }
 
 svg {
@@ -46,20 +44,71 @@ svg {
 }
 
 .map-pin {
-  //opacity: 0;
-  //animation: hideshow 20s 1s linear infinite;
   opacity: 0;
-  //animation: animatetop 10s ease-in-out 3s infinite;
   animation: fading 10s infinite;
-}
 
-.path {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: dash 1s linear alternate infinite;
+  .path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: dash 1s linear alternate infinite;
+  }
 }
 
 .pin-balloon {
   opacity: 0;
   animation: fading 10s 1s infinite;
+}
+
+.queue-info {
+  width: 17%;
+  height: auto;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 5px 5px 0 rgba(109,109,109,1);
+  -moz-box-shadow: 4px 5px 5px 0 rgba(109,109,109,1);
+  box-shadow: 4px 5px 5px 0 rgba(109,109,109,1);
+
+  p {
+    font-size: 10px;
+    font-size: 0.70vw;
+    font-family: skolarRegular, serif;
+    margin: 3px 0;
+  }
+
+  &#queue-1 {
+    position: absolute;
+    top: 11em;
+    left: 13em;
+    z-index: 1;
+    opacity: 0;
+    animation: fading-secondary 10s 1s infinite;
+  }
+
+  &#queue-2 {
+    position: absolute;
+    top: 8em;
+    left: 28em;
+    z-index: 1;
+    opacity: 0;
+    animation: fading-secondary 10s 1s infinite;
+  }
+
+  &#queue-3 {
+    position: absolute;
+    top: -3em;
+    right: 23em;
+    z-index: 1;
+    opacity: 0;
+    animation: fading-secondary 10s 1s infinite;
+  }
+
+  &#queue-4 {
+    position: absolute;
+    top: 12em;
+    right: 2em;
+    z-index: 1;
+    opacity: 0;
+    animation: fading-secondary 10s 1s infinite;
+  }
 }

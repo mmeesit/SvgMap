@@ -38,7 +38,7 @@ function getPositionArray(pinNumber: number) {
 }
 
 function positionStaticElements() {
-    let fillNumbers: number[] = [5531, 1073, 1503, 3349]; //NYC, LONDON, BERLIN, MOSCOW, TOKYO
+    let fillNumbers: number[] = [5531, 1073, 1503, 3349]; //NYC, LONDON, MOSCOW, TOKYO
     let staticPinId: number = 1;
 
     for (let fillNumber of fillNumbers) {
