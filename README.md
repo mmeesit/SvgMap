@@ -21,4 +21,4 @@ This is a MVP, not the perfect product.
 
 The data cards are all static html elements for presentation purposes only.
 
-![alt](https://imgur.com/a/xnkoJxY)
+![Image of Map](https://ibb.co/BCfxcGj)
