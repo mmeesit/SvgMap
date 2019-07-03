@@ -5,6 +5,7 @@ path position in relation to main svg element. Then I am finding random map poin
 between 1-6175 (current map point amount) and adding a map pin to it.
 Some pins will become absolute, ie Moscow, Berlin, New York, which also have
 a text point or sorts.
+It will find random map points every 15 seconds, except the static points, until 5 minutes runs out.
 
 Currently pins are added already in the main SVG, inside a group.
 If i wanted to do this more dynamically, I'd loop the creation in javascript,
@@ -17,4 +18,7 @@ For instance, the last element (location performance elements) should
 all be in one place in JS, where it's easily duplicated and changed.
 
 This is a MVP, not the perfect product.
+
+The data cards are all static html elements for presentation purposes only.
+
 
